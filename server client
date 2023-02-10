@@ -1,0 +1,72 @@
+127.0.0.1:6379> SADD CUST_DETAILS : name raj aadhi madu
+(integer) 3
+127.0.0.1:6379> SADD CUST_DETAILS : place erode tirupur salem
+(integer) 4
+127.0.0.1:6379> SADD CUST_DETAILS : facility ac nonac ac
+(integer) 3
+127.0.0.1:6379> SADD CUST_DETAILS : phno 9123478694 9876543217 7123456789
+(integer) 4
+127.0.0.1:6379> SADD HOTEL_DETAILS : hotelplace chennai banglore coimbatore
+(integer) 5
+127.0.0.1:6379> SADD HOTEL_DETAILS : name taj kohinoor emarald
+(integer) 4
+127.0.0.1:6379> SADD HOTEL_DETAILS : food veg nonveg veg
+(integer) 3
+127.0.0.1:6379> SADD HOTEL_DETAILS : paymentmethod online offline online
+(integer) 3
+127.0.0.1:6379> SADD STAFF_DETAILS : staff cleaner server chef
+(integer) 5
+127.0.0.1:6379> SADD STAFF_DETAILS : staffid a12 b11 b45
+(integer) 4
+127.0.0.1:6379> SADD STAFF_DETAILS : salary 10000 20000 30000
+(integer) 4
+127.0.0.1:6379> SMEMBERS CUST_DETAILS
+ 1) "place"
+ 2) "raj"
+ 3) "phno"
+ 4) "madu"
+ 5) "nonac"
+ 6) "aadhi"
+ 7) "facility"
+ 8) "salem"
+ 9) ":"
+10) "tirupur"
+11) "ac"
+12) "name"
+13) "7123456789"
+14) "erode"
+15) "9123478694"
+16) "9876543217"
+127.0.0.1:6379> SMEMBERS HOTEL_DETAILS
+ 1) "banglore"
+ 2) "kohinoor"
+ 3) "food"
+ 4) "coimbatore"
+ 5) "name"
+ 6) "nonveg"
+ 7) "emarald"
+ 8) "paymentmethod"
+ 9) "offline"
+10) "veg"
+11) "chennai"
+12) "taj"
+13) "online"
+14) "hotelplace"
+15) ":"
+127.0.0.1:6379> SMEMBERS STAFF_DETAILS
+ 1) "b11"
+ 2) "salary"
+ 3) "chef"
+ 4) "b45"
+ 5) "30000"
+ 6) "a12"
+ 7) "staffid"
+ 8) "20000"
+ 9) "staff"
+10) "10000"
+11) "server"
+12) "cleaner"
+13) ":"
+127.0.0.1:6379> SAVE
+OK
+127.0.0.1:6379>
